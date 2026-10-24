@@ -1,0 +1,29 @@
+{
+  "id": "silk-cloak-humefemale",
+  "armor": "Silk Cloak",
+  "race": "HumeFemale",
+  "lookRace": 2,
+  "modelId": 11,
+  "fileId": 10555,
+  "topology": "silk-cloak-humefemale-v1",
+  "nodeCount": 1310,
+  "startingStatus": "In-game approved by author, 2026-10-23",
+  "format": "hoodie-handback-v1",
+  "toolVersion": "0.3.0",
+  "neckOption": null,
+  "geometryMaxRoundtripErrorMeters": 6.143905518511898e-08,
+  "nativeRoundtripPassed": true,
+  "uvAndSkinWeightsChecked": true,
+  "inGameTested": true,
+  "variants": {
+    "up": {
+      "bytes": 71728,
+      "sha256": "820cfaab0ed3fd02bee27a21bf0dba02623f6c9053d84e9c6d76955167dfd76c"
+    },
+    "down": {
+      "bytes": 295584,
+      "sha256": "8ea8bc1e543e40f5f72b22813b553af0d59f55ba5a92c4a96a1354a2c0726d72"
+    }
+  },
+  "assetApprovalDate": "2026-10-23"
+}

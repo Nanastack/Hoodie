@@ -1,0 +1,29 @@
+{
+  "id": "silk-cloak-galka",
+  "armor": "Silk Cloak",
+  "race": "Galka",
+  "lookRace": 8,
+  "modelId": 11,
+  "fileId": 26659,
+  "topology": "silk-cloak-galka-v1",
+  "nodeCount": 1310,
+  "startingStatus": "In-game approved by author, 2026-10-23",
+  "format": "hoodie-handback-v1",
+  "toolVersion": "0.3.0",
+  "neckOption": null,
+  "geometryMaxRoundtripErrorMeters": 1.22934579867747e-07,
+  "nativeRoundtripPassed": true,
+  "uvAndSkinWeightsChecked": true,
+  "inGameTested": true,
+  "variants": {
+    "up": {
+      "bytes": 74384,
+      "sha256": "387453f34b6ada186f2ed59afe6ec32a3141df20dd54c19921f2e54d9a61ae66"
+    },
+    "down": {
+      "bytes": 307408,
+      "sha256": "9bf5c65de22c4ae29bab686b10673a4c1b9ff098c71ea489000cc216159ebcfb"
+    }
+  },
+  "assetApprovalDate": "2026-10-23"
+}

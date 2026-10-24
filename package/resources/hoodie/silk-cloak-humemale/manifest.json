@@ -1,0 +1,29 @@
+{
+  "id": "silk-cloak-humemale",
+  "armor": "Silk Cloak",
+  "race": "HumeMale",
+  "lookRace": 1,
+  "modelId": 11,
+  "fileId": 7379,
+  "topology": "silk-cloak-humemale-v1",
+  "nodeCount": 1310,
+  "startingStatus": "In-game approved by author, 2026-10-23",
+  "format": "hoodie-handback-v1",
+  "toolVersion": "0.3.0",
+  "neckOption": null,
+  "geometryMaxRoundtripErrorMeters": 6.218189660164708e-08,
+  "nativeRoundtripPassed": true,
+  "uvAndSkinWeightsChecked": true,
+  "inGameTested": true,
+  "variants": {
+    "up": {
+      "bytes": 69392,
+      "sha256": "5d71815039471a41323edbd711fb46b57fbce3510b3225cf30a9e1d945577302"
+    },
+    "down": {
+      "bytes": 292176,
+      "sha256": "10ce5e1d0cd2c4dc2928b0eba8c9bb1c6cabca2f8edeb0d0d892d7bf651fec56"
+    }
+  },
+  "assetApprovalDate": "2026-10-23"
+}

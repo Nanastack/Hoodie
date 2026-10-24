@@ -1,0 +1,35 @@
+{
+  "id": "royal-footman-tunic-elvaanfemale",
+  "armor": "Royal Footman Tunic",
+  "race": "ElvaanFemale",
+  "lookRace": 4,
+  "modelId": 3,
+  "fileId": 16899,
+  "topology": "royal-footman-tunic-elvaanfemale-vermi-style-v2",
+  "nodeCount": 1310,
+  "startingStatus": "In-game approved by author, 2026-10-23",
+  "format": "hoodie-handback-v1",
+  "toolVersion": "0.3.0",
+  "neckOption": {
+    "enabled": true,
+    "height": 0,
+    "thickness": 0,
+    "coverage": 0,
+    "depth": 0
+  },
+  "geometryMaxRoundtripErrorMeters": 1.192157202209148e-07,
+  "nativeRoundtripPassed": true,
+  "uvAndSkinWeightsChecked": true,
+  "inGameTested": true,
+  "variants": {
+    "up": {
+      "bytes": 1078704,
+      "sha256": "80f35097855899c37da9b98e0dded2468a5a33b0a4fac3fd4b7d20ed80b4e5f4"
+    },
+    "down": {
+      "bytes": 1388160,
+      "sha256": "d9086ef6439a657051f11fe43d99c1bd72dd8bffc288bf3653e50e236be01290"
+    }
+  },
+  "assetApprovalDate": "2026-10-23"
+}

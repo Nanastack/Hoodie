@@ -1,0 +1,29 @@
+{
+  "id": "vermillion-cloak-mithra",
+  "armor": "Vermillion Cloak",
+  "race": "Mithra",
+  "lookRace": 7,
+  "modelId": 47,
+  "fileId": 23519,
+  "topology": "vermillion-cloak-mithra-v1",
+  "nodeCount": 1310,
+  "startingStatus": "In-game approved by author, 2026-10-23",
+  "format": "hoodie-handback-v1",
+  "toolVersion": "0.3.0",
+  "neckOption": null,
+  "geometryMaxRoundtripErrorMeters": 6.143905518511898e-08,
+  "nativeRoundtripPassed": true,
+  "uvAndSkinWeightsChecked": true,
+  "inGameTested": true,
+  "variants": {
+    "up": {
+      "bytes": 4931072,
+      "sha256": "bcdb2d1e307076ddd8c6fe29299d8ec84483fda8336742594fc50d50505130b1"
+    },
+    "down": {
+      "bytes": 5171344,
+      "sha256": "65918c1f7e87fd632868c98f962f9c8d75e3b393d6c1d149aefca5fbb7e82fee"
+    }
+  },
+  "assetApprovalDate": "2026-10-23"
+}

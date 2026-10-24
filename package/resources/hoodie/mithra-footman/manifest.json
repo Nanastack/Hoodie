@@ -1,0 +1,29 @@
+{
+  "id": "royal-footman-tunic-mithra",
+  "armor": "Royal Footman Tunic",
+  "race": "Mithra",
+  "lookRace": 7,
+  "modelId": 3,
+  "fileId": 23475,
+  "topology": "royal-footman-tunic-mithra-vermi-style-v2",
+  "nodeCount": 1310,
+  "startingStatus": "In-game approved by author, 2026-10-23",
+  "format": "hoodie-handback-v1",
+  "toolVersion": "0.3.0",
+  "neckOption": null,
+  "geometryMaxRoundtripErrorMeters": 6.143905518511898e-08,
+  "nativeRoundtripPassed": true,
+  "uvAndSkinWeightsChecked": true,
+  "inGameTested": true,
+  "variants": {
+    "up": {
+      "bytes": 1081456,
+      "sha256": "81dab6c191817d37555e23d5e93973024fce52c18bde0b0abfa91c910ee67bd6"
+    },
+    "down": {
+      "bytes": 1874304,
+      "sha256": "b4050280581c8c8abdb7ff564a907fa3e38c1a2b40e25567bab4ccbb2a9a08e9"
+    }
+  },
+  "assetApprovalDate": "2026-10-23"
+}

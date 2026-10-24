@@ -1,0 +1,29 @@
+{
+  "id": "cloak-mithra",
+  "armor": "Cloak",
+  "race": "Mithra",
+  "lookRace": 7,
+  "modelId": 10,
+  "fileId": 23482,
+  "topology": "cloak-mithra-v1",
+  "nodeCount": 1310,
+  "startingStatus": "In-game approved by author, 2026-10-23",
+  "format": "hoodie-handback-v1",
+  "toolVersion": "0.3.0",
+  "neckOption": null,
+  "geometryMaxRoundtripErrorMeters": 6.143905518511898e-08,
+  "nativeRoundtripPassed": true,
+  "uvAndSkinWeightsChecked": true,
+  "inGameTested": true,
+  "variants": {
+    "up": {
+      "bytes": 73168,
+      "sha256": "a1ae85f7e35523600263277604d572fbc96690bc3de4a477794993a0fd3a4061"
+    },
+    "down": {
+      "bytes": 300624,
+      "sha256": "8bace304309b864e30751aef6df21aff2a078a595f64f00974db62ebb886b2d6"
+    }
+  },
+  "assetApprovalDate": "2026-10-23"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "vermillion-cloak-humemale",
+  "armor": "Vermillion Cloak",
+  "race": "HumeMale",
+  "lookRace": 1,
+  "modelId": 47,
+  "fileId": 7415,
+  "topology": "vermillion-cloak-humemale-v1",
+  "nodeCount": 1310,
+  "startingStatus": "In-game approved by author, 2026-10-23",
+  "format": "hoodie-handback-v1",
+  "toolVersion": "0.3.0",
+  "neckOption": {
+    "enabled": true,
+    "height": 0,
+    "thickness": 0,
+    "coverage": 0,
+    "depth": 0
+  },
+  "geometryMaxRoundtripErrorMeters": 5.972096017706337e-08,
+  "nativeRoundtripPassed": true,
+  "uvAndSkinWeightsChecked": true,
+  "inGameTested": true,
+  "variants": {
+    "up": {
+      "bytes": 4879648,
+      "sha256": "e0b45ed8389d752c5d8ce451db818299c794e0e983000c0c159018e5e83a72b1"
+    },
+    "down": {
+      "bytes": 5071120,
+      "sha256": "ac3f349f60fc7365ba1128285af62ded5a87ee0f4ae4cb3ba06c7b7f9b512a8f"
+    }
+  },
+  "assetApprovalDate": "2026-10-23"
+}

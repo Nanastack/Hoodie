@@ -1,0 +1,35 @@
+{
+  "id": "silk-cloak-mithra",
+  "armor": "Silk Cloak",
+  "race": "Mithra",
+  "lookRace": 7,
+  "modelId": 11,
+  "fileId": 23483,
+  "topology": "silk-cloak-mithra-v1",
+  "nodeCount": 1310,
+  "startingStatus": "In-game approved by author, 2026-10-23",
+  "format": "hoodie-handback-v1",
+  "toolVersion": "0.3.0",
+  "neckOption": {
+    "enabled": true,
+    "height": 0,
+    "thickness": 0,
+    "coverage": 0,
+    "depth": 0
+  },
+  "geometryMaxRoundtripErrorMeters": 6.143905518511898e-08,
+  "nativeRoundtripPassed": true,
+  "uvAndSkinWeightsChecked": true,
+  "inGameTested": true,
+  "variants": {
+    "up": {
+      "bytes": 73168,
+      "sha256": "a1a91639d814ff5f161ce47f548c1ede103fe7626e0b4f87b5c9c0ed646a7f2c"
+    },
+    "down": {
+      "bytes": 368592,
+      "sha256": "2f8e4d2821b5b78fd664fb7a7b7f54a6c82528414a51bdd17c3e36d22eaa88b3"
+    }
+  },
+  "assetApprovalDate": "2026-10-23"
+}

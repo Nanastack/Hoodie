@@ -1,0 +1,29 @@
+{
+  "id": "black-cloak-humemale",
+  "armor": "Black Cloak",
+  "race": "HumeMale",
+  "lookRace": 1,
+  "modelId": 46,
+  "fileId": 7414,
+  "topology": "black-cloak-humemale-v1",
+  "nodeCount": 1310,
+  "startingStatus": "In-game approved by author, 2026-10-23",
+  "format": "hoodie-handback-v1",
+  "toolVersion": "0.3.0",
+  "neckOption": null,
+  "geometryMaxRoundtripErrorMeters": 5.972096017706337e-08,
+  "nativeRoundtripPassed": true,
+  "uvAndSkinWeightsChecked": true,
+  "inGameTested": true,
+  "variants": {
+    "up": {
+      "bytes": 70208,
+      "sha256": "66202846020dad779b3f8632ff27716ee0a4ee03f412efd4a80f7212a41ba543"
+    },
+    "down": {
+      "bytes": 291392,
+      "sha256": "45e58e5df5e37f8144fd0ae206c0c462263b157e40e90747ac5b5deb2d9a2efc"
+    }
+  },
+  "assetApprovalDate": "2026-10-23"
+}

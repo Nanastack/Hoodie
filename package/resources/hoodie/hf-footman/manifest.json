@@ -1,0 +1,29 @@
+{
+  "id": "royal-footman-tunic-humefemale",
+  "armor": "Royal Footman Tunic",
+  "race": "HumeFemale",
+  "lookRace": 2,
+  "modelId": 3,
+  "fileId": 10547,
+  "topology": "royal-footman-tunic-humefemale-vermi-style-v2",
+  "nodeCount": 1310,
+  "startingStatus": "In-game approved by author, 2026-10-23",
+  "format": "hoodie-handback-v1",
+  "toolVersion": "0.3.0",
+  "neckOption": null,
+  "geometryMaxRoundtripErrorMeters": 6.143905518511898e-08,
+  "nativeRoundtripPassed": true,
+  "uvAndSkinWeightsChecked": true,
+  "inGameTested": true,
+  "variants": {
+    "up": {
+      "bytes": 1079344,
+      "sha256": "4fe06edef1160dd3eb5902d6bb151a3d5821be60caf2a9f04c2182875ce65ba1"
+    },
+    "down": {
+      "bytes": 1344640,
+      "sha256": "ddffcfdb8b6782c27d1e3b1509fbc27bc1930c5ec0727afbbaa84ae9fde90645"
+    }
+  },
+  "assetApprovalDate": "2026-10-23"
+}

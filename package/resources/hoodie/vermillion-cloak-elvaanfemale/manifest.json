@@ -1,0 +1,35 @@
+{
+  "id": "vermillion-cloak-elvaanfemale",
+  "armor": "Vermillion Cloak",
+  "race": "ElvaanFemale",
+  "lookRace": 4,
+  "modelId": 47,
+  "fileId": 16943,
+  "topology": "vermillion-cloak-elvaanfemale-v1",
+  "nodeCount": 1310,
+  "startingStatus": "In-game approved by author, 2026-10-23",
+  "format": "hoodie-handback-v1",
+  "toolVersion": "0.3.0",
+  "neckOption": {
+    "enabled": true,
+    "height": -1,
+    "thickness": -0.2,
+    "coverage": 6,
+    "depth": 0
+  },
+  "geometryMaxRoundtripErrorMeters": 2.1340057824174982e-05,
+  "nativeRoundtripPassed": true,
+  "uvAndSkinWeightsChecked": true,
+  "inGameTested": true,
+  "variants": {
+    "up": {
+      "bytes": 4882176,
+      "sha256": "dd1f4413f5462a7b7f595df4665b162d9b39b8dbf96f0a2a8babd2f88c386d28"
+    },
+    "down": {
+      "bytes": 5617872,
+      "sha256": "623be3201540bbfd74e22f8be2241dcb373a84efddbcdf7821b65fc84c8a9ba9"
+    }
+  },
+  "assetApprovalDate": "2026-10-23"
+}

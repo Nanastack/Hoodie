@@ -1,0 +1,35 @@
+{
+  "id": "silk-cloak-elvaanmale",
+  "armor": "Silk Cloak",
+  "race": "ElvaanMale",
+  "lookRace": 3,
+  "modelId": 11,
+  "fileId": 13731,
+  "topology": "silk-cloak-elvaanmale-v1",
+  "nodeCount": 1310,
+  "startingStatus": "In-game approved by author, 2026-10-23",
+  "format": "hoodie-handback-v1",
+  "toolVersion": "0.3.0",
+  "neckOption": {
+    "enabled": true,
+    "height": 0,
+    "thickness": 0,
+    "coverage": 0,
+    "depth": 0
+  },
+  "geometryMaxRoundtripErrorMeters": 6.049722209547522e-08,
+  "nativeRoundtripPassed": true,
+  "uvAndSkinWeightsChecked": true,
+  "inGameTested": true,
+  "variants": {
+    "up": {
+      "bytes": 70048,
+      "sha256": "cdb701f99433a30d9aed52e0e9c6bb58ea02d003286479c66486bb42ee4b0f48"
+    },
+    "down": {
+      "bytes": 858112,
+      "sha256": "583a8f812c980f26ed6ea000e0ac838791f6f61400ceac7f1442ab4dafbe5f1e"
+    }
+  },
+  "assetApprovalDate": "2026-10-23"
+}

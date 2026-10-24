@@ -1,0 +1,29 @@
+{
+  "id": "cloak-humemale",
+  "armor": "Cloak",
+  "race": "HumeMale",
+  "lookRace": 1,
+  "modelId": 10,
+  "fileId": 7378,
+  "topology": "cloak-humemale-v1",
+  "nodeCount": 1310,
+  "startingStatus": "In-game approved by author, 2026-10-23",
+  "format": "hoodie-handback-v1",
+  "toolVersion": "0.3.0",
+  "neckOption": null,
+  "geometryMaxRoundtripErrorMeters": 5.972096017706337e-08,
+  "nativeRoundtripPassed": true,
+  "uvAndSkinWeightsChecked": true,
+  "inGameTested": true,
+  "variants": {
+    "up": {
+      "bytes": 70208,
+      "sha256": "439ecd9832d377e050400bc2f2af0eab05f8d48ea5180ee69b2485d3b8c43f0f"
+    },
+    "down": {
+      "bytes": 291632,
+      "sha256": "00153f2f65124a1eb6058f954cf9a4ef67815b01c9fd5bbf3ec558355df79010"
+    }
+  },
+  "assetApprovalDate": "2026-10-23"
+}

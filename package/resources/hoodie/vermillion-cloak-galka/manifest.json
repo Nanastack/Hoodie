@@ -1,0 +1,29 @@
+{
+  "id": "vermillion-cloak-galka",
+  "armor": "Vermillion Cloak",
+  "race": "Galka",
+  "lookRace": 8,
+  "modelId": 47,
+  "fileId": 26695,
+  "topology": "vermillion-cloak-galka-v1",
+  "nodeCount": 1310,
+  "startingStatus": "In-game approved by author, 2026-10-23",
+  "format": "hoodie-handback-v1",
+  "toolVersion": "0.3.0",
+  "neckOption": null,
+  "geometryMaxRoundtripErrorMeters": 1.22934579867747e-07,
+  "nativeRoundtripPassed": true,
+  "uvAndSkinWeightsChecked": true,
+  "inGameTested": true,
+  "variants": {
+    "up": {
+      "bytes": 4950752,
+      "sha256": "13c3b097eb02e6be5736c391361a8db0ecebc055f75ea71c89d62814a28b7d98"
+    },
+    "down": {
+      "bytes": 5119264,
+      "sha256": "bbd7551557e6e06600006adb7ab3c50fdafc0a7855a4b136f344595ae2427e63"
+    }
+  },
+  "assetApprovalDate": "2026-10-23"
+}

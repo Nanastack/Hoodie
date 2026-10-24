@@ -1,0 +1,29 @@
+{
+  "id": "cloak-humefemale",
+  "armor": "Cloak",
+  "race": "HumeFemale",
+  "lookRace": 2,
+  "modelId": 10,
+  "fileId": 10554,
+  "topology": "cloak-humefemale-v1",
+  "nodeCount": 1310,
+  "startingStatus": "In-game approved by author, 2026-10-23",
+  "format": "hoodie-handback-v1",
+  "toolVersion": "0.3.0",
+  "neckOption": null,
+  "geometryMaxRoundtripErrorMeters": 6.143905518511898e-08,
+  "nativeRoundtripPassed": true,
+  "uvAndSkinWeightsChecked": true,
+  "inGameTested": true,
+  "variants": {
+    "up": {
+      "bytes": 128128,
+      "sha256": "eac490027c41d3ac498257593e623982c50ad874536fd380ebe03f70d369fdef"
+    },
+    "down": {
+      "bytes": 295472,
+      "sha256": "168b16480629b1ec57cf327080e047af8c829074333d120dbcd892ed3a3cf05d"
+    }
+  },
+  "assetApprovalDate": "2026-10-23"
+}

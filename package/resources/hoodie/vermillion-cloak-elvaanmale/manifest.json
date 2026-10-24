@@ -1,0 +1,35 @@
+{
+  "id": "vermillion-cloak-elvaanmale",
+  "armor": "Vermillion Cloak",
+  "race": "ElvaanMale",
+  "lookRace": 3,
+  "modelId": 47,
+  "fileId": 13767,
+  "topology": "vermillion-cloak-elvaanmale-v1",
+  "nodeCount": 1310,
+  "startingStatus": "In-game approved by author, 2026-10-23",
+  "format": "hoodie-handback-v1",
+  "toolVersion": "0.3.0",
+  "neckOption": {
+    "enabled": true,
+    "height": -3,
+    "thickness": 0,
+    "coverage": 0,
+    "depth": 0
+  },
+  "geometryMaxRoundtripErrorMeters": 6.049722209547522e-08,
+  "nativeRoundtripPassed": true,
+  "uvAndSkinWeightsChecked": true,
+  "inGameTested": true,
+  "variants": {
+    "up": {
+      "bytes": 4882128,
+      "sha256": "7fcbd9dcb7139c3878359ee6bbdb2c2a999914986bc1e322c6e589eb359a09ae"
+    },
+    "down": {
+      "bytes": 5617792,
+      "sha256": "65055954ba1c06f076b4e02ac00c898bbb67b89679776308c309b9bc46f08be3"
+    }
+  },
+  "assetApprovalDate": "2026-10-23"
+}

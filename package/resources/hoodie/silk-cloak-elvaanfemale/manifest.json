@@ -1,0 +1,35 @@
+{
+  "id": "silk-cloak-elvaanfemale",
+  "armor": "Silk Cloak",
+  "race": "ElvaanFemale",
+  "lookRace": 4,
+  "modelId": 11,
+  "fileId": 16907,
+  "topology": "silk-cloak-elvaanfemale-v1",
+  "nodeCount": 1310,
+  "startingStatus": "In-game approved by author, 2026-10-23",
+  "format": "hoodie-handback-v1",
+  "toolVersion": "0.3.0",
+  "neckOption": {
+    "enabled": true,
+    "height": 0,
+    "thickness": 0,
+    "coverage": 0,
+    "depth": 0
+  },
+  "geometryMaxRoundtripErrorMeters": 2.002716220840759e-05,
+  "nativeRoundtripPassed": true,
+  "uvAndSkinWeightsChecked": true,
+  "inGameTested": true,
+  "variants": {
+    "up": {
+      "bytes": 71088,
+      "sha256": "1922f6e63da8725c61c911a08c134c1eed1167686926bf3d621f40c47b2eecfb"
+    },
+    "down": {
+      "bytes": 863376,
+      "sha256": "a32fbca6d43ad8a06e98fe5c54a869b3693d1e6948e0a41c1a20ade12acb22be"
+    }
+  },
+  "assetApprovalDate": "2026-10-23"
+}

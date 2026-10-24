@@ -1,0 +1,35 @@
+{
+  "id": "black-cloak-elvaanmale",
+  "armor": "Black Cloak",
+  "race": "ElvaanMale",
+  "lookRace": 3,
+  "modelId": 46,
+  "fileId": 13766,
+  "topology": "black-cloak-elvaanmale-v1",
+  "nodeCount": 1310,
+  "startingStatus": "In-game approved by author, 2026-10-23",
+  "format": "hoodie-handback-v1",
+  "toolVersion": "0.3.0",
+  "neckOption": {
+    "enabled": true,
+    "height": 0,
+    "thickness": 0,
+    "coverage": 0,
+    "depth": 0
+  },
+  "geometryMaxRoundtripErrorMeters": 6.049722209547522e-08,
+  "nativeRoundtripPassed": true,
+  "uvAndSkinWeightsChecked": true,
+  "inGameTested": true,
+  "variants": {
+    "up": {
+      "bytes": 70016,
+      "sha256": "8ed2f7cc28ee63adaedc02c0b7727a915397699fdf776618d47dd25b12c3d6d9"
+    },
+    "down": {
+      "bytes": 857712,
+      "sha256": "898be0d179550892c05212f8a85ca6030c0dfe77865f65d248ff128d610d403b"
+    }
+  },
+  "assetApprovalDate": "2026-10-23"
+}

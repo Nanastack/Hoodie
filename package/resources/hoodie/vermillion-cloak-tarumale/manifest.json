@@ -1,0 +1,29 @@
+{
+  "id": "vermillion-cloak-tarumale",
+  "armor": "Vermillion Cloak",
+  "race": "TaruMale",
+  "lookRace": 5,
+  "modelId": 47,
+  "fileId": 20119,
+  "topology": "vermillion-cloak-tarumale-v1",
+  "nodeCount": 1310,
+  "startingStatus": "In-game approved by author, 2026-10-23",
+  "format": "hoodie-handback-v1",
+  "toolVersion": "0.3.0",
+  "neckOption": null,
+  "geometryMaxRoundtripErrorMeters": 3.041273848147191e-08,
+  "nativeRoundtripPassed": true,
+  "uvAndSkinWeightsChecked": true,
+  "inGameTested": true,
+  "variants": {
+    "up": {
+      "bytes": 1718928,
+      "sha256": "41c461bbc5437fdf52847786c6415b0fbee5897ed1f54b7cb8330eef74d7802d"
+    },
+    "down": {
+      "bytes": 1859760,
+      "sha256": "c0a587415825f444c5e079b82617481b99fc38e315fb61f8c2d5cec1aa4dbd8b"
+    }
+  },
+  "assetApprovalDate": "2026-10-23"
+}

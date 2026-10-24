@@ -1,0 +1,578 @@
+{
+  "name": "Hoodie",
+  "version": "1.0.0",
+  "architecture": "x86",
+  "interfaceVersion": "4.30",
+  "nativePairs": 35,
+  "variants": 70,
+  "raceSelections": 8,
+  "armorFamilies": 5,
+  "normalEquippedArmorRouting": true,
+  "raceArmorSwapRemoved": true,
+  "diagnosticStartupAndGUIRemoved": true,
+  "productionAutomaticCapture": false,
+  "animateChangePreferencePreserved": true,
+  "sha256": "e930c54b06ae6194f07d902b968d93b76f030a0c7b04bc977f0276e48ae4428d",
+  "assets": [
+    {
+      "id": "black-cloak-elvaanfemale",
+      "race": 4,
+      "bodyModel": 46,
+      "folder": "black-cloak-elvaanfemale",
+      "variants": {
+        "up": {
+          "bytes": 71088,
+          "sha256": "0d85314dbffef506d19efcf4b56ea7b6b076a7d15feb0220c552e90040b98f42"
+        },
+        "down": {
+          "bytes": 862832,
+          "sha256": "c13c427d322ffea898ee3b2882e112be6cdf3972779b97fcdb18789854495160"
+        }
+      }
+    },
+    {
+      "id": "black-cloak-elvaanmale",
+      "race": 3,
+      "bodyModel": 46,
+      "folder": "black-cloak-elvaanmale",
+      "variants": {
+        "up": {
+          "bytes": 70016,
+          "sha256": "8ed2f7cc28ee63adaedc02c0b7727a915397699fdf776618d47dd25b12c3d6d9"
+        },
+        "down": {
+          "bytes": 857712,
+          "sha256": "898be0d179550892c05212f8a85ca6030c0dfe77865f65d248ff128d610d403b"
+        }
+      }
+    },
+    {
+      "id": "black-cloak-galka",
+      "race": 8,
+      "bodyModel": 46,
+      "folder": "black-cloak-galka",
+      "variants": {
+        "up": {
+          "bytes": 74304,
+          "sha256": "d5a6510c2dff4dc90aaa0d81acbc51caac9ca510d38a4ffc3854feb3b33539b9"
+        },
+        "down": {
+          "bytes": 308288,
+          "sha256": "99ea4b20ba93cfb7b5c1515783b751d97488fded26d985ac383861c498859970"
+        }
+      }
+    },
+    {
+      "id": "black-cloak-humefemale",
+      "race": 2,
+      "bodyModel": 46,
+      "folder": "black-cloak-humefemale",
+      "variants": {
+        "up": {
+          "bytes": 71728,
+          "sha256": "fc48c939430e6997ff7d559e421063d146fbfe105dcf73ec4dd91d1c9fb3cd51"
+        },
+        "down": {
+          "bytes": 295344,
+          "sha256": "e3ec5cdde48007c852901f6ef99948e66481de38b749a731218fcfd93cc5db7b"
+        }
+      }
+    },
+    {
+      "id": "black-cloak-humemale",
+      "race": 1,
+      "bodyModel": 46,
+      "folder": "black-cloak-humemale",
+      "variants": {
+        "up": {
+          "bytes": 70208,
+          "sha256": "66202846020dad779b3f8632ff27716ee0a4ee03f412efd4a80f7212a41ba543"
+        },
+        "down": {
+          "bytes": 291392,
+          "sha256": "45e58e5df5e37f8144fd0ae206c0c462263b157e40e90747ac5b5deb2d9a2efc"
+        }
+      }
+    },
+    {
+      "id": "black-cloak-mithra",
+      "race": 7,
+      "bodyModel": 46,
+      "folder": "black-cloak-mithra",
+      "variants": {
+        "up": {
+          "bytes": 73168,
+          "sha256": "a1d7c0dc9c8846487d7c39a96423530b650572ef32c7063e9dddd2077b4cc3e9"
+        },
+        "down": {
+          "bytes": 300464,
+          "sha256": "7995d4a17549bf154eb53d5b7dfec2f23ebf92de53d472b75ab9b9f1e2dc7982"
+        }
+      }
+    },
+    {
+      "id": "black-cloak-tarumale",
+      "race": 5,
+      "bodyModel": 46,
+      "folder": "black-cloak-tarumale",
+      "variants": {
+        "up": {
+          "bytes": 45200,
+          "sha256": "89dcf2aeec6b794224907406dc5f021b70dd636900a79cf9572b40f12e96ecf4"
+        },
+        "down": {
+          "bytes": 252304,
+          "sha256": "ce87f3aea2a14d1b3ccb35c70f48036b50e25b1211161441e2bb3fc6e456231d"
+        }
+      }
+    },
+    {
+      "id": "cloak-elvaanfemale",
+      "race": 4,
+      "bodyModel": 10,
+      "folder": "cloak-elvaanfemale",
+      "variants": {
+        "up": {
+          "bytes": 71088,
+          "sha256": "b62c3e7f7136f543d0b34be9b47b2872d9f0e65277836f442f1a5e9035bef753"
+        },
+        "down": {
+          "bytes": 863232,
+          "sha256": "89267bfb929c5268e49c18bbf5562337658c95a41415b03a459a04cbe423521b"
+        }
+      }
+    },
+    {
+      "id": "cloak-elvaanmale",
+      "race": 3,
+      "bodyModel": 10,
+      "folder": "cloak-elvaanmale",
+      "variants": {
+        "up": {
+          "bytes": 70048,
+          "sha256": "66b6e8314d68554edceb3a1b492f9c2c8cec3a434a6dc226fe38cd48c3e1b436"
+        },
+        "down": {
+          "bytes": 857904,
+          "sha256": "5891f9ea165000fd96883d46c92dbc20ff0a842b598275b3d5a54f1c9eba397e"
+        }
+      }
+    },
+    {
+      "id": "cloak-galka",
+      "race": 8,
+      "bodyModel": 10,
+      "folder": "cloak-galka",
+      "variants": {
+        "up": {
+          "bytes": 74384,
+          "sha256": "6425faefb4def1ccc77caf808e5a5dfb0688af0f0dd6ae04744e1551d3c253fd"
+        },
+        "down": {
+          "bytes": 308720,
+          "sha256": "aaaa65da388a848b351e3d6c90eff12d342ca9ea85c2cd9f2b87b61ed2ceaa95"
+        }
+      }
+    },
+    {
+      "id": "cloak-humefemale",
+      "race": 2,
+      "bodyModel": 10,
+      "folder": "cloak-humefemale",
+      "variants": {
+        "up": {
+          "bytes": 128128,
+          "sha256": "eac490027c41d3ac498257593e623982c50ad874536fd380ebe03f70d369fdef"
+        },
+        "down": {
+          "bytes": 295472,
+          "sha256": "168b16480629b1ec57cf327080e047af8c829074333d120dbcd892ed3a3cf05d"
+        }
+      }
+    },
+    {
+      "id": "cloak-humemale",
+      "race": 1,
+      "bodyModel": 10,
+      "folder": "cloak-humemale",
+      "variants": {
+        "up": {
+          "bytes": 70208,
+          "sha256": "439ecd9832d377e050400bc2f2af0eab05f8d48ea5180ee69b2485d3b8c43f0f"
+        },
+        "down": {
+          "bytes": 291632,
+          "sha256": "00153f2f65124a1eb6058f954cf9a4ef67815b01c9fd5bbf3ec558355df79010"
+        }
+      }
+    },
+    {
+      "id": "cloak-mithra",
+      "race": 7,
+      "bodyModel": 10,
+      "folder": "cloak-mithra",
+      "variants": {
+        "up": {
+          "bytes": 73168,
+          "sha256": "a1ae85f7e35523600263277604d572fbc96690bc3de4a477794993a0fd3a4061"
+        },
+        "down": {
+          "bytes": 300624,
+          "sha256": "8bace304309b864e30751aef6df21aff2a078a595f64f00974db62ebb886b2d6"
+        }
+      }
+    },
+    {
+      "id": "cloak-tarumale",
+      "race": 5,
+      "bodyModel": 10,
+      "folder": "cloak-tarumale",
+      "variants": {
+        "up": {
+          "bytes": 45200,
+          "sha256": "a9c66fdb070dbbfbcedfe31f67676462076464e9a8e7fd3d2929115c01a79e45"
+        },
+        "down": {
+          "bytes": 252640,
+          "sha256": "6899beb6e81e9447a097b63904964cb530059e4a31873013466fc801e1f6a927"
+        }
+      }
+    },
+    {
+      "id": "royal-footman-tunic-elvaanfemale",
+      "race": 4,
+      "bodyModel": 3,
+      "folder": "elvaanfemale-footman",
+      "variants": {
+        "up": {
+          "bytes": 1078704,
+          "sha256": "80f35097855899c37da9b98e0dded2468a5a33b0a4fac3fd4b7d20ed80b4e5f4"
+        },
+        "down": {
+          "bytes": 1388160,
+          "sha256": "d9086ef6439a657051f11fe43d99c1bd72dd8bffc288bf3653e50e236be01290"
+        }
+      }
+    },
+    {
+      "id": "royal-footman-tunic-elvaanmale",
+      "race": 3,
+      "bodyModel": 3,
+      "folder": "elvaanmale-footman",
+      "variants": {
+        "up": {
+          "bytes": 1077664,
+          "sha256": "7b6507de9c42f702fbb832e4464ed84c491b07ff3d27886face1cf4597b0fec0"
+        },
+        "down": {
+          "bytes": 2502976,
+          "sha256": "f47f6a8861cd32d01ed649e5fa9d6e3b52a812833ede108692e1cfa6de58eaab"
+        }
+      }
+    },
+    {
+      "id": "royal-footman-tunic-galka",
+      "race": 8,
+      "bodyModel": 3,
+      "folder": "galka-footman",
+      "variants": {
+        "up": {
+          "bytes": 1082000,
+          "sha256": "3057c3dcc33787b44287ecfe335824927c5f2a177dea2d7a39a3f5cbff044a19"
+        },
+        "down": {
+          "bytes": 1882176,
+          "sha256": "b7d22321e72cbbddc4e23ee47dfffc52efd600227f158669a7a8864dda6a6719"
+        }
+      }
+    },
+    {
+      "id": "royal-footman-tunic-humefemale",
+      "race": 2,
+      "bodyModel": 3,
+      "folder": "hf-footman",
+      "variants": {
+        "up": {
+          "bytes": 1079344,
+          "sha256": "4fe06edef1160dd3eb5902d6bb151a3d5821be60caf2a9f04c2182875ce65ba1"
+        },
+        "down": {
+          "bytes": 1344640,
+          "sha256": "ddffcfdb8b6782c27d1e3b1509fbc27bc1930c5ec0727afbbaa84ae9fde90645"
+        }
+      }
+    },
+    {
+      "id": "royal-footman-tunic-humemale",
+      "race": 1,
+      "bodyModel": 3,
+      "folder": "humemale-footman",
+      "variants": {
+        "up": {
+          "bytes": 1077824,
+          "sha256": "09d31de23a16ef518d85a797e21a16452057a5773699177f8033f2db6e527e03"
+        },
+        "down": {
+          "bytes": 1865792,
+          "sha256": "e475dba66bed59baad725fe2e1841243541e39034ca8abdb5237231365f5c826"
+        }
+      }
+    },
+    {
+      "id": "royal-footman-tunic-mithra",
+      "race": 7,
+      "bodyModel": 3,
+      "folder": "mithra-footman",
+      "variants": {
+        "up": {
+          "bytes": 1081456,
+          "sha256": "81dab6c191817d37555e23d5e93973024fce52c18bde0b0abfa91c910ee67bd6"
+        },
+        "down": {
+          "bytes": 1874304,
+          "sha256": "b4050280581c8c8abdb7ff564a907fa3e38c1a2b40e25567bab4ccbb2a9a08e9"
+        }
+      }
+    },
+    {
+      "id": "silk-cloak-elvaanfemale",
+      "race": 4,
+      "bodyModel": 11,
+      "folder": "silk-cloak-elvaanfemale",
+      "variants": {
+        "up": {
+          "bytes": 71088,
+          "sha256": "1922f6e63da8725c61c911a08c134c1eed1167686926bf3d621f40c47b2eecfb"
+        },
+        "down": {
+          "bytes": 863376,
+          "sha256": "a32fbca6d43ad8a06e98fe5c54a869b3693d1e6948e0a41c1a20ade12acb22be"
+        }
+      }
+    },
+    {
+      "id": "silk-cloak-elvaanmale",
+      "race": 3,
+      "bodyModel": 11,
+      "folder": "silk-cloak-elvaanmale",
+      "variants": {
+        "up": {
+          "bytes": 70048,
+          "sha256": "cdb701f99433a30d9aed52e0e9c6bb58ea02d003286479c66486bb42ee4b0f48"
+        },
+        "down": {
+          "bytes": 858112,
+          "sha256": "583a8f812c980f26ed6ea000e0ac838791f6f61400ceac7f1442ab4dafbe5f1e"
+        }
+      }
+    },
+    {
+      "id": "silk-cloak-galka",
+      "race": 8,
+      "bodyModel": 11,
+      "folder": "silk-cloak-galka",
+      "variants": {
+        "up": {
+          "bytes": 74384,
+          "sha256": "387453f34b6ada186f2ed59afe6ec32a3141df20dd54c19921f2e54d9a61ae66"
+        },
+        "down": {
+          "bytes": 307408,
+          "sha256": "9bf5c65de22c4ae29bab686b10673a4c1b9ff098c71ea489000cc216159ebcfb"
+        }
+      }
+    },
+    {
+      "id": "silk-cloak-humefemale",
+      "race": 2,
+      "bodyModel": 11,
+      "folder": "silk-cloak-humefemale",
+      "variants": {
+        "up": {
+          "bytes": 71728,
+          "sha256": "820cfaab0ed3fd02bee27a21bf0dba02623f6c9053d84e9c6d76955167dfd76c"
+        },
+        "down": {
+          "bytes": 295584,
+          "sha256": "8ea8bc1e543e40f5f72b22813b553af0d59f55ba5a92c4a96a1354a2c0726d72"
+        }
+      }
+    },
+    {
+      "id": "silk-cloak-humemale",
+      "race": 1,
+      "bodyModel": 11,
+      "folder": "silk-cloak-humemale",
+      "variants": {
+        "up": {
+          "bytes": 69392,
+          "sha256": "5d71815039471a41323edbd711fb46b57fbce3510b3225cf30a9e1d945577302"
+        },
+        "down": {
+          "bytes": 292176,
+          "sha256": "10ce5e1d0cd2c4dc2928b0eba8c9bb1c6cabca2f8edeb0d0d892d7bf651fec56"
+        }
+      }
+    },
+    {
+      "id": "silk-cloak-mithra",
+      "race": 7,
+      "bodyModel": 11,
+      "folder": "silk-cloak-mithra",
+      "variants": {
+        "up": {
+          "bytes": 73168,
+          "sha256": "a1a91639d814ff5f161ce47f548c1ede103fe7626e0b4f87b5c9c0ed646a7f2c"
+        },
+        "down": {
+          "bytes": 368592,
+          "sha256": "2f8e4d2821b5b78fd664fb7a7b7f54a6c82528414a51bdd17c3e36d22eaa88b3"
+        }
+      }
+    },
+    {
+      "id": "silk-cloak-tarumale",
+      "race": 5,
+      "bodyModel": 11,
+      "folder": "silk-cloak-tarumale",
+      "variants": {
+        "up": {
+          "bytes": 45200,
+          "sha256": "320f6e814af9593e883801a9a9f5ab258786e454e2dcfecb432e4b202d4b52da"
+        },
+        "down": {
+          "bytes": 252912,
+          "sha256": "977b7a4a117d0e4071ac0c23a7ca687f5949a89528d759a0f194980fe0ff001b"
+        }
+      }
+    },
+    {
+      "id": "royal-footman-tunic-tarumale",
+      "race": 5,
+      "bodyModel": 3,
+      "folder": "taru-footman",
+      "variants": {
+        "up": {
+          "bytes": 1597584,
+          "sha256": "e9e8cda5b71f7c57610d1f813f0dd40840f60f939f0d77fedf6d8e394ecc4ef3"
+        },
+        "down": {
+          "bytes": 2371392,
+          "sha256": "7063263205a69b2088fbcfe965515a1d1baa5368d475127428bec64682b072e9"
+        }
+      }
+    },
+    {
+      "id": "vermillion-cloak-elvaanfemale",
+      "race": 4,
+      "bodyModel": 47,
+      "folder": "vermillion-cloak-elvaanfemale",
+      "variants": {
+        "up": {
+          "bytes": 4882176,
+          "sha256": "dd1f4413f5462a7b7f595df4665b162d9b39b8dbf96f0a2a8babd2f88c386d28"
+        },
+        "down": {
+          "bytes": 5617872,
+          "sha256": "623be3201540bbfd74e22f8be2241dcb373a84efddbcdf7821b65fc84c8a9ba9"
+        }
+      }
+    },
+    {
+      "id": "vermillion-cloak-elvaanmale",
+      "race": 3,
+      "bodyModel": 47,
+      "folder": "vermillion-cloak-elvaanmale",
+      "variants": {
+        "up": {
+          "bytes": 4882128,
+          "sha256": "7fcbd9dcb7139c3878359ee6bbdb2c2a999914986bc1e322c6e589eb359a09ae"
+        },
+        "down": {
+          "bytes": 5617792,
+          "sha256": "65055954ba1c06f076b4e02ac00c898bbb67b89679776308c309b9bc46f08be3"
+        }
+      }
+    },
+    {
+      "id": "vermillion-cloak-galka",
+      "race": 8,
+      "bodyModel": 47,
+      "folder": "vermillion-cloak-galka",
+      "variants": {
+        "up": {
+          "bytes": 4950752,
+          "sha256": "13c3b097eb02e6be5736c391361a8db0ecebc055f75ea71c89d62814a28b7d98"
+        },
+        "down": {
+          "bytes": 5119264,
+          "sha256": "bbd7551557e6e06600006adb7ab3c50fdafc0a7855a4b136f344595ae2427e63"
+        }
+      }
+    },
+    {
+      "id": "vermillion-cloak-humefemale",
+      "race": 2,
+      "bodyModel": 47,
+      "folder": "vermillion-cloak-humefemale",
+      "variants": {
+        "up": {
+          "bytes": 5406768,
+          "sha256": "3da243b9e02aa3febb93dfc5f025aadfd548cb8ee304eefe130820d5870b9901"
+        },
+        "down": {
+          "bytes": 5643184,
+          "sha256": "43ba9b41e8cb83aa258121566b4cc6746a704f76c0dcd93f06b15718e9724f6b"
+        }
+      }
+    },
+    {
+      "id": "vermillion-cloak-humemale",
+      "race": 1,
+      "bodyModel": 47,
+      "folder": "vermillion-cloak-humemale",
+      "variants": {
+        "up": {
+          "bytes": 4879648,
+          "sha256": "e0b45ed8389d752c5d8ce451db818299c794e0e983000c0c159018e5e83a72b1"
+        },
+        "down": {
+          "bytes": 5071120,
+          "sha256": "ac3f349f60fc7365ba1128285af62ded5a87ee0f4ae4cb3ba06c7b7f9b512a8f"
+        }
+      }
+    },
+    {
+      "id": "vermillion-cloak-mithra",
+      "race": 7,
+      "bodyModel": 47,
+      "folder": "vermillion-cloak-mithra",
+      "variants": {
+        "up": {
+          "bytes": 4931072,
+          "sha256": "bcdb2d1e307076ddd8c6fe29299d8ec84483fda8336742594fc50d50505130b1"
+        },
+        "down": {
+          "bytes": 5171344,
+          "sha256": "65918c1f7e87fd632868c98f962f9c8d75e3b393d6c1d149aefca5fbb7e82fee"
+        }
+      }
+    },
+    {
+      "id": "vermillion-cloak-tarumale",
+      "race": 5,
+      "bodyModel": 47,
+      "folder": "vermillion-cloak-tarumale",
+      "variants": {
+        "up": {
+          "bytes": 1718928,
+          "sha256": "41c461bbc5437fdf52847786c6415b0fbee5897ed1f54b7cb8330eef74d7802d"
+        },
+        "down": {
+          "bytes": 1859760,
+          "sha256": "c0a587415825f444c5e079b82617481b99fc38e315fb61f8c2d5cec1aa4dbd8b"
+        }
+      }
+    }
+  ]
+}

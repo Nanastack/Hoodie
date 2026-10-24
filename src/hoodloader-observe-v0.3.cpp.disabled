@@ -1,0 +1,87 @@
+// Observe-only diagnostic. No DAT routing, model writes, or refresh path exists.
+#include "Ashita.h"
+#include "detours.h"
+#include "routing.h"
+#include <atomic>
+#include <intrin.h>
+#include <fstream>
+#include <sstream>
+#include <filesystem>
+#include <array>
+using OpenA=decltype(&CreateFileA);
+static OpenA realOpen=CreateFileA;
+using FindA=decltype(&FindFirstFileA);static FindA realFind=FindFirstFileA;
+static std::atomic<unsigned> reads{0};
+static thread_local bool inside=false;
+struct Sample {DWORD thread=0;void* frames[12]={};USHORT count=0;ULONGLONG bytes=0;bool metadata=false,success=false;char actual[MAX_PATH]={};};
+static std::array<Sample,32> samples;
+static SRWLOCK sampleLock=SRWLOCK_INIT;
+static void record(Sample sample){
+    sample.thread=GetCurrentThreadId();sample.count=CaptureStackBackTrace(1,12,sample.frames,nullptr);
+    AcquireSRWLockExclusive(&sampleLock);auto n=reads.fetch_add(1);samples[n%samples.size()]=sample;ReleaseSRWLockExclusive(&sampleLock);
+}
+static HANDLE WINAPI openHook(LPCSTR p,DWORD a,DWORD s,LPSECURITY_ATTRIBUTES sa,DWORD c,DWORD f,HANDLE t){
+    HANDLE h=realOpen(p,a,s,sa,c,f,t);DWORD error=GetLastError();
+    if(!inside && p && footmanPath(p)){
+        inside=true;Sample sample;sample.success=h!=INVALID_HANDLE_VALUE;
+        if(sample.success){LARGE_INTEGER size{};if(GetFileSizeEx(h,&size))sample.bytes=size.QuadPart;GetFinalPathNameByHandleA(h,sample.actual,MAX_PATH,FILE_NAME_NORMALIZED);}
+        record(sample);inside=false;
+    }
+    SetLastError(error);return h;
+}
+static HANDLE WINAPI findHook(LPCSTR p,LPWIN32_FIND_DATAA data){
+    HANDLE h=realFind(p,data);DWORD error=GetLastError();
+    if(!inside && p && footmanPath(p)){
+        inside=true;Sample sample;sample.metadata=true;sample.success=h!=INVALID_HANDLE_VALUE;
+        if(sample.success&&data)sample.bytes=((ULONGLONG)data->nFileSizeHigh<<32)|data->nFileSizeLow;
+        record(sample);inside=false;
+    }
+    SetLastError(error);return h;
+}
+class HoodLoader final:public IPlugin {
+    IAshitaCore* core=nullptr;bool hooked=false;std::string logPath;
+    void say(const char* text){core->GetChatManager()->Writef(207,false,"[hoodloader] %s",text);}
+    void report(){
+        std::array<Sample,32> snapshot;unsigned n;
+        AcquireSRWLockShared(&sampleLock);snapshot=samples;n=reads.load();ReleaseSRWLockShared(&sampleLock);
+        std::ofstream file(logPath);file<<"HoodLoader 0.3 OBSERVE ONLY\nNo redirects, no entity/model writes, no refresh.\nTarget ROM/32/114.DAT file events: "<<n<<"\n";
+        for(unsigned k=0;k<(n<32?n:32);++k){const auto& sample=snapshot[n<32?k:(n+k)%32];file<<"\n"<<(sample.metadata?"METADATA":"OPEN")<<" success="<<sample.success<<" bytes="<<sample.bytes<<" thread="<<sample.thread<<" actual="<<sample.actual<<"\n";
+            for(unsigned j=0;j<sample.count;++j){HMODULE module=nullptr;char name[MAX_PATH]={};auto address=(uintptr_t)sample.frames[j];
+                if(GetModuleHandleExA(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS|GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT,(LPCSTR)address,&module)){GetModuleFileNameA(module,name,MAX_PATH);file<<name<<" + 0x"<<std::hex<<(address-(uintptr_t)module)<<std::dec<<"\n";}
+                else file<<"unmapped 0x"<<std::hex<<address<<std::dec<<"\n";
+            }
+        }
+        file.flush();say(file.good()?"Report saved to logs/hoodloader-observe.txt":"Could not write diagnostic report.");
+    }
+public:
+    bool Direct3DInitialize(IDirect3DDevice8*) override{return true;}
+    const char* GetName()const override{return "hoodloader";}
+    const char* GetAuthor()const override{return "Local diagnostic";}
+    const char* GetDescription()const override{return "Observe-only DAT open traces; no appearance changes";}
+    double GetVersion()const override{return .3;}
+    uint32_t GetFlags()const override{return (uint32_t)Ashita::PluginFlags::UseCommands;}
+    bool Initialize(IAshitaCore* c,ILogManager*,uint32_t)override{
+        core=c;logPath=(std::filesystem::path(c->GetInstallPath())/"logs"/"hoodloader-observe.txt").string();
+        if(DetourTransactionBegin()!=NO_ERROR)return false;
+        LONG status=DetourUpdateThread(GetCurrentThread());
+        if(status==NO_ERROR)status=DetourAttach(&(PVOID&)realOpen,openHook);
+        if(status==NO_ERROR)status=DetourAttach(&(PVOID&)realFind,findHook);
+        if(status!=NO_ERROR){DetourTransactionAbort();return false;}
+        hooked=DetourTransactionCommit()==NO_ERROR;
+        if(hooked)say("0.3 OBSERVE ONLY. Test/refresh disabled. /hoodloader status or /hoodloader report.");return hooked;
+    }
+    void Release()override{
+        if(hooked){DetourTransactionBegin();DetourUpdateThread(GetCurrentThread());DetourDetach(&(PVOID&)realOpen,openHook);DetourDetach(&(PVOID&)realFind,findHook);DetourTransactionCommit();hooked=false;}
+    }
+    bool HandleCommand(int32_t,const char* command,bool)override{
+        if(!command)return false;std::string cmd=normalize(command);
+        if(cmd!="/hoodloader"&&cmd.rfind("/hoodloader ",0)!=0)return false;
+        if(cmd=="/hoodloader report")report();
+        else if(cmd=="/hoodloader test"||cmd=="/hoodloader refresh")say("Disabled in 0.3. This diagnostic never swaps or redirects models.");
+        else core->GetChatManager()->Writef(207,false,"[hoodloader] 0.3 OBSERVE ONLY; target DAT events=%u; redirects=0; model writes=0.",reads.load());
+        return true;
+    }
+};
+extern "C" __declspec(dllexport) double __stdcall expGetInterfaceVersion(){return ASHITA_INTERFACE_VERSION;}
+extern "C" __declspec(dllexport) IPlugin* __stdcall expCreatePlugin(const char*){return new HoodLoader;}
+extern "C" __declspec(dllexport) void __stdcall expDestroyPlugin(IPlugin* p){delete p;}

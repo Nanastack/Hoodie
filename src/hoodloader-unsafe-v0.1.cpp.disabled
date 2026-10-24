@@ -1,0 +1,91 @@
+// Experimental real-ID DAT router. Shared game-cache behavior is NOT isolated per actor.
+#include "Ashita.h"
+#include "detours.h"
+#include "routing.h"
+#include <atomic>
+#include <filesystem>
+
+using OpenA=decltype(&CreateFileA);
+static OpenA realOpen=CreateFileA;
+static std::atomic<int> variant{0}; // 0=observe, 1=up, 2=down
+static std::atomic<unsigned> reads{0},redirects{0},failures{0};
+static std::string upPath,downPath;
+static thread_local bool inside=false;
+static HANDLE WINAPI openHook(LPCSTR p,DWORD a,DWORD s,LPSECURITY_ATTRIBUTES sa,DWORD c,DWORD f,HANDLE t) {
+    if(inside || !p || !footmanPath(p) || c!=OPEN_EXISTING || (a & (GENERIC_WRITE|DELETE|FILE_APPEND_DATA))) return realOpen(p,a,s,sa,c,f,t);
+    reads.fetch_add(1); int v=variant.load();
+    if(!v) return realOpen(p,a,s,sa,c,f,t);
+    inside=true; HANDLE h=realOpen(v==2?downPath.c_str():upPath.c_str(),a,s,sa,c,f,t);inside=false;
+    if(h!=INVALID_HANDLE_VALUE){redirects.fetch_add(1);return h;}
+    failures.fetch_add(1);return realOpen(p,a,s,sa,c,f,t);
+}
+class HoodLoader final: public IPlugin {
+    IAshitaCore* core=nullptr; bool hooked=false,armed=false;
+    uint32_t pendingIndex=0,pendingId=0; uint16_t savedLook=0; int countdown=0;
+    unsigned startReads=0; ULONGLONG reportAt=0;
+    void say(const char* text){core->GetChatManager()->Writef(207,false,"[hoodloader] %s",text);}
+    bool player(uint32_t& i) {
+        i=core->GetMemoryManager()->GetParty()->GetMemberTargetIndex(0);
+        return i>0 && i<0x900 && core->GetMemoryManager()->GetEntity()->GetServerId(i)!=0;
+    }
+    void restore() {
+        if(!countdown)return;
+        auto e=core->GetMemoryManager()->GetEntity();
+        if(e->GetServerId(pendingIndex)==pendingId && e->GetLookBody(pendingIndex)==(savedLook&0xf000)) {
+            e->SetLookBody(pendingIndex,savedLook);e->SetModelUpdateFlags(pendingIndex,e->GetModelUpdateFlags(pendingIndex)|1);
+        }
+        countdown=0;
+    }
+    void refresh() {
+        restore();uint32_t i;if(!player(i)){say("No local character.");return;}
+        auto e=core->GetMemoryManager()->GetEntity();auto look=e->GetLookBody(i);
+        if(e->GetRace(i)!=2 || (look&0x0fff)!=3){say("Test requires Hume female body 3. Unload hooddown first; body 500 is not supported here.");return;}
+        // Temporary retail body 0 requests release/reacquisition of real body 3.
+        // This is a cache experiment, not proof of per-actor cache isolation.
+        savedLook=look;pendingIndex=i;pendingId=e->GetServerId(i);countdown=3;
+        startReads=reads.load();reportAt=GetTickCount64()+2500;
+        e->SetLookBody(i,look&0xf000);e->SetModelUpdateFlags(i,e->GetModelUpdateFlags(i)|1);
+    }
+public:
+    bool Direct3DInitialize(IDirect3DDevice8*) override {return true;}
+    const char* GetName() const override{return "hoodloader";}
+    const char* GetAuthor() const override{return "Local prototype";}
+    const char* GetDescription() const override{return "Experimental real-model-ID hood DAT loader and cache probe";}
+    double GetVersion() const override{return 0.1;}
+    uint32_t GetFlags() const override{return (uint32_t)Ashita::PluginFlags::UseCommands|(uint32_t)Ashita::PluginFlags::UseDirect3D;}
+    bool Initialize(IAshitaCore* c,ILogManager*,uint32_t) override {
+        core=c;auto root=std::filesystem::path(c->GetInstallPath())/"resources"/"hoodloader"/"hf-footman";
+        upPath=(root/"up.dat").string();downPath=(root/"down.dat").string();
+        if(!std::filesystem::is_regular_file(upPath)||!std::filesystem::is_regular_file(downPath)){say("Missing resources/hoodloader/hf-footman/{up,down}.dat");return false;}
+        if(DetourTransactionBegin()!=NO_ERROR)return false;
+        DetourUpdateThread(GetCurrentThread());DetourAttach(&(PVOID&)realOpen,openHook);
+        hooked=DetourTransactionCommit()==NO_ERROR;
+        if(hooked)say("Observe mode. /hoodloader status. /hoodloader test enables GLOBAL client-side routing; not per-character isolated.");
+        return hooked;
+    }
+    void Release() override {
+        variant=0;restore();
+        if(hooked){DetourTransactionBegin();DetourUpdateThread(GetCurrentThread());DetourDetach(&(PVOID&)realOpen,openHook);DetourTransactionCommit();hooked=false;}
+    }
+    bool HandleCommand(int32_t,const char* command,bool) override {
+        char b[4096]={};core->GetChatManager()->ParseAutoTranslate(command,b,sizeof(b),false);
+        std::string cmd=b[0]?b:command;
+        for(auto tag:{std::string("\xEF\x27"),std::string("\xEF\x28")}){size_t p;while((p=cmd.find(tag))!=std::string::npos)cmd.erase(p,tag.size());}
+        std::transform(cmd.begin(),cmd.end(),cmd.begin(),[](unsigned char c){return (char)std::tolower(c);});
+        while(!cmd.empty()&&std::isspace((unsigned char)cmd.back()))cmd.pop_back();
+        if(cmd=="/hoodloader test"){armed=true;say("Test armed: routing is GLOBAL for this DAT. Use /displayhead on/off. Stop with /hoodloader stop, then restart to clear shared cache.");return true;}
+        if(cmd=="/hoodloader stop"){armed=false;variant=0;restore();say("Routing stopped. Already cached models may persist until restart.");return true;}
+        if(cmd=="/hoodloader refresh"){if(armed)refresh();else say("Observe mode; enable test first.");return true;}
+        if(cmd=="/hoodloader status"||cmd=="/hoodloader"){
+            core->GetChatManager()->Writef(207,false,"[hoodloader] %s; variant=%d; reads=%u; redirected=%u; failures=%u; original model=3; shared-cache isolation UNVERIFIED.",armed?"TEST":"OBSERVE",variant.load(),reads.load(),redirects.load(),failures.load());return true;}
+        if(armed&&(cmd=="/displayhead on"||cmd=="/displayhead off")){variant=cmd=="/displayhead off"?2:1;refresh();}
+        return false;
+    }
+    void Direct3DPresent(const RECT*,const RECT*,HWND,const RGNDATA*) override {
+        if(countdown && countdown--==1){countdown=1;restore();}
+        if(reportAt && GetTickCount64()>=reportAt){reportAt=0;say(reads.load()>startReads?"DAT open observed. Check hood visually; an open does not prove cache isolation.":"No DAT reopen observed: model cache retained it. Do not treat this as a successful toggle.");}
+    }
+};
+extern "C" __declspec(dllexport) double __stdcall expGetInterfaceVersion(){return ASHITA_INTERFACE_VERSION;}
+extern "C" __declspec(dllexport) IPlugin* __stdcall expCreatePlugin(const char*){return new HoodLoader;}
+extern "C" __declspec(dllexport) void __stdcall expDestroyPlugin(IPlugin* p){delete p;}

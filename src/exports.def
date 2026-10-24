@@ -1,0 +1,4 @@
+EXPORTS
+ expGetInterfaceVersion=_expGetInterfaceVersion@0
+ expCreatePlugin=_expCreatePlugin@4
+ expDestroyPlugin=_expDestroyPlugin@4

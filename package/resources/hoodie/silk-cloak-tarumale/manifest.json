@@ -1,0 +1,29 @@
+{
+  "id": "silk-cloak-tarumale",
+  "armor": "Silk Cloak",
+  "race": "TaruMale",
+  "lookRace": 5,
+  "modelId": 11,
+  "fileId": 20083,
+  "topology": "silk-cloak-tarumale-v1",
+  "nodeCount": 1310,
+  "startingStatus": "In-game approved by author, 2026-10-23",
+  "format": "hoodie-handback-v1",
+  "toolVersion": "0.3.0",
+  "neckOption": null,
+  "geometryMaxRoundtripErrorMeters": 3.041273848147191e-08,
+  "nativeRoundtripPassed": true,
+  "uvAndSkinWeightsChecked": true,
+  "inGameTested": true,
+  "variants": {
+    "up": {
+      "bytes": 45200,
+      "sha256": "320f6e814af9593e883801a9a9f5ab258786e454e2dcfecb432e4b202d4b52da"
+    },
+    "down": {
+      "bytes": 252912,
+      "sha256": "977b7a4a117d0e4071ac0c23a7ca687f5949a89528d759a0f194980fe0ff001b"
+    }
+  },
+  "assetApprovalDate": "2026-10-23"
+}

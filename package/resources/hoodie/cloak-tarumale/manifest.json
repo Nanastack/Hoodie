@@ -1,0 +1,29 @@
+{
+  "id": "cloak-tarumale",
+  "armor": "Cloak",
+  "race": "TaruMale",
+  "lookRace": 5,
+  "modelId": 10,
+  "fileId": 20082,
+  "topology": "cloak-tarumale-v1",
+  "nodeCount": 1310,
+  "startingStatus": "In-game approved by author, 2026-10-23",
+  "format": "hoodie-handback-v1",
+  "toolVersion": "0.3.0",
+  "neckOption": null,
+  "geometryMaxRoundtripErrorMeters": 3.041273848147191e-08,
+  "nativeRoundtripPassed": true,
+  "uvAndSkinWeightsChecked": true,
+  "inGameTested": true,
+  "variants": {
+    "up": {
+      "bytes": 45200,
+      "sha256": "a9c66fdb070dbbfbcedfe31f67676462076464e9a8e7fd3d2929115c01a79e45"
+    },
+    "down": {
+      "bytes": 252640,
+      "sha256": "6899beb6e81e9447a097b63904964cb530059e4a31873013466fc801e1f6a927"
+    }
+  },
+  "assetApprovalDate": "2026-10-23"
+}

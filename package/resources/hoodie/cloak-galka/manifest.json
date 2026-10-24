@@ -1,0 +1,29 @@
+{
+  "id": "cloak-galka",
+  "armor": "Cloak",
+  "race": "Galka",
+  "lookRace": 8,
+  "modelId": 10,
+  "fileId": 26658,
+  "topology": "cloak-galka-v1",
+  "nodeCount": 1310,
+  "startingStatus": "In-game approved by author, 2026-10-23",
+  "format": "hoodie-handback-v1",
+  "toolVersion": "0.3.0",
+  "neckOption": null,
+  "geometryMaxRoundtripErrorMeters": 1.22934579867747e-07,
+  "nativeRoundtripPassed": true,
+  "uvAndSkinWeightsChecked": true,
+  "inGameTested": true,
+  "variants": {
+    "up": {
+      "bytes": 74384,
+      "sha256": "6425faefb4def1ccc77caf808e5a5dfb0688af0f0dd6ae04744e1551d3c253fd"
+    },
+    "down": {
+      "bytes": 308720,
+      "sha256": "aaaa65da388a848b351e3d6c90eff12d342ca9ea85c2cd9f2b87b61ed2ceaa95"
+    }
+  },
+  "assetApprovalDate": "2026-10-23"
+}

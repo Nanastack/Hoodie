@@ -1,0 +1,35 @@
+{
+  "id": "cloak-elvaanmale",
+  "armor": "Cloak",
+  "race": "ElvaanMale",
+  "lookRace": 3,
+  "modelId": 10,
+  "fileId": 13730,
+  "topology": "cloak-elvaanmale-v1",
+  "nodeCount": 1310,
+  "startingStatus": "In-game approved by author, 2026-10-23",
+  "format": "hoodie-handback-v1",
+  "toolVersion": "0.3.0",
+  "neckOption": {
+    "enabled": true,
+    "height": -1.8,
+    "thickness": -0.1,
+    "coverage": 0,
+    "depth": 0
+  },
+  "geometryMaxRoundtripErrorMeters": 7.038126800077717e-08,
+  "nativeRoundtripPassed": true,
+  "uvAndSkinWeightsChecked": true,
+  "inGameTested": true,
+  "variants": {
+    "up": {
+      "bytes": 70048,
+      "sha256": "66b6e8314d68554edceb3a1b492f9c2c8cec3a434a6dc226fe38cd48c3e1b436"
+    },
+    "down": {
+      "bytes": 857904,
+      "sha256": "5891f9ea165000fd96883d46c92dbc20ff0a842b598275b3d5a54f1c9eba397e"
+    }
+  },
+  "assetApprovalDate": "2026-10-23"
+}
