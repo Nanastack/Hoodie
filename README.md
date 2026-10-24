@@ -1,6 +1,9 @@
 # Hoodie 1.0.0
 by: Zarianna
 
+<img width="710" height="1383" alt="hood-up" src="https://github.com/user-attachments/assets/24aa6abb-b327-450f-942a-50a4fb4ec2b4" />
+<img width="710" height="1383" alt="hood-down" src="https://github.com/user-attachments/assets/93d3c3bf-db68-4943-8af6-6369994f86ff" />
+
 Raise or lower your character's hood with `/displayhead`.
 
 Hoodie works with the armor listed below on all player races. It automatically uses the right hood for the armor you are wearing. Only your view of the game changes; installing Hoodie does not change what other players see on their screens.
