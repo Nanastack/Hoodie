@@ -2,9 +2,8 @@
 by: Zarianna
 
 [Hoodie Demo](https://youtu.be/_DZHGhDNK-w)
-| Hood up | Hood down |
-|:---:|:---:|
-| <img src="PASTE_HOOD_UP_IMAGE_URL" width="350"> | <img src="PASTE_HOOD_DOWN_IMAGE_URL" width="350"> |
+
+<img width="600" height="584" alt="image" src="https://github.com/user-attachments/assets/6de85831-e3b4-40df-9183-d3459f6d01f1" />
 
 Raise or lower your character's hood with `/displayhead`.
 
