@@ -48,10 +48,6 @@ In the settings:
 
 You can also use `/hoodie enable`, `/hoodie disable`, and `/hoodie status`.
 
-## Supported armor
-
-This list covers the original game through **Treasures of Aht Urhgan**. Items in each row share the same hood appearance, including the listed HQ versions.
-
 ## Things to know
 
 - **Other players must be reloaded after they change displayhead.** Their hood does not update live on your screen when they toggle `/displayhead`. Reload that character on your clientâ€”for example, by moving far enough away or zoning to see their new hood state.
