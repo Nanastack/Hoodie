@@ -2,6 +2,7 @@
 by: Zarianna
 
 [Hoodie Demo](https://youtu.be/_DZHGhDNK-w)
+
 <img width="710" height="1383" alt="hood-up" src="https://github.com/user-attachments/assets/24aa6abb-b327-450f-942a-50a4fb4ec2b4" />
 <img width="710" height="1383" alt="hood-down" src="https://github.com/user-attachments/assets/93d3c3bf-db68-4943-8af6-6369994f86ff" />
 
